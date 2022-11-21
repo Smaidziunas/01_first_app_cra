@@ -1,3 +1,3 @@
 # first cra
 
-start: npm start;
+start: npm start

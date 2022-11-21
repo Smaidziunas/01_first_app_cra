@@ -8,14 +8,13 @@ const card1 = (
     <img className='card__img' src={house5} alt='namas penktas' />
   </div>
 );
+
 const card2 = (
   <div className='card'>
     <h4 className='card__title'>house 2</h4>
-    <img className='card__img' src='./house2.jpg' alt='namas antras' />
+    <img className='card__img' src='/img/house2.jpg' alt='namas antras' />
   </div>
 );
-
-
 
 // react componentas
 function HouseGrid() {
@@ -31,24 +30,45 @@ function HouseGrid() {
   );
 }
 
-
-// react TeamItem1 component
-
-function TeamItem1 () {
- return (
-    <div className='teamItem'>
-        <img src='./team2.jpg' alt='team member' />
-        <h3 className='team__title'>John Doe</h3>
-        <p className='team__ocupation'>CEO & Founder</p>
-        <p className='team_desc'>
-          Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
-          elementum.
-        </p>
-        <button>Contact</button>
+function TeamGrid() {
+  return (
+    <div className='grid1'>
+    {teamItem1}
+    {teamItem2}
+    {teamItem1}
+    {teamItem2}
   </div>
-   
   )
 }
+
+const teamItem1 = (
+
+    <div className='teamItem'>
+      <img src='/img/team2.jpg' alt='team member' />
+      <h3 className='team__title'>John Doe</h3>
+      <p className='team__ocupation'>CEO & Founder</p>
+      <p className='team_desc'>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+        elementum.
+      </p>
+      <button>Contact</button>
+    </div>
+  );
+
+const teamItem2 = (
+
+    <div className='teamItem'>
+      <img src='/img/team1.jpg' alt='team member' />
+      <h3 className='team__title'>Jane Doe</h3>
+      <p className='team__ocupation'>Architect</p>
+      <p className='team_desc'>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque
+        elementum.
+      </p>
+      <button>Contact</button>
+    </div>
+  );
+
 
 function App() {
   const name = 'James';
@@ -61,15 +81,10 @@ function App() {
       {/* {houseGrid} */}
       <HouseGrid />
 
-      <TeamItem1 />
-      {/* <TeamItem2 /> */}
-      {/* <TeamItem3 /> */}
-      {/* <TeamItem4 /> */}
-      
+      <TeamGrid />
 
       <hr />
-      <h2>House 2</h2>
-      <img src='/img/house2.jpg' alt='second house' />
+      {/* contact form */}
     </div>
   );
 }
